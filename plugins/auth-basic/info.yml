@@ -1,0 +1,11 @@
+id: auth-basic
+name: Basic Auth Provider
+description: Add basic (username-password) authentication and authorization to your service. This plugin must be installed with the “NestJS Auth Module” plugin.
+repo: borgius/amplication-plugins
+npm: "@amplication/plugin-auth-basic"
+icon: auth-basic.png
+github: https://github.com/borgius/amplication-plugins/tree/main/plugins/auth-basic
+website: https://github.com/borgius/amplication-plugins/tree/main/plugins/auth-basic
+type: official
+categories: [security]
+resourceTypes: [service]

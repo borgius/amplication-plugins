@@ -1,0 +1,11 @@
+id: auth-jwt
+name: JWT Auth Provider
+description: Add JSON Web Token (JWT) authentication and authorization to your service. This plugin must be installed with the “NestJS Auth Module” plugin.
+repo: borgius/amplication-plugins
+npm: "@amplication/plugin-auth-jwt"
+icon: auth-jwt.png
+github: https://github.com/borgius/amplication-plugins/tree/main/plugins/auth-jwt
+website: https://github.com/borgius/amplication-plugins/tree/main/plugins/auth-jwt
+type: official
+categories: [security]
+resourceTypes: [service]

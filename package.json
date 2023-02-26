@@ -4,16 +4,21 @@
   "description": "Amplication DSG plugins",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "setup0": "ep -d1 npm i",
+    "build0": "ep -d1 npm run build"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/amplication/plugins.git"
+    "url": "git+https://github.com/borgius/amplication-plugins.git"
   },
   "author": "barshimi",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/amplication/plugins/issues"
+    "url": "https://github.com/borgius/amplication-plugins/issues"
   },
-  "homepage": "https://github.com/amplication/plugins#readme"
+  "homepage": "https://github.com/borgius/amplication-plugins#readme",
+  "dependencies": {
+    "each-package": "^0.4.4"
+  }
 }
