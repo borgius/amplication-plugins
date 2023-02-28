@@ -1,7 +1,7 @@
 import { Injectable, UnauthorizedException } from "@nestjs/common";
 // @ts-ignore
 // eslint-disable-next-line
-import { UserService } from "../user/user.service";
+import { UserService } from "../entities/user/user.service";
 import { Credentials } from "./Credentials";
 import { PasswordService } from "./password.service";
 import { TokenService } from "./token.service";
@@ -13,7 +13,7 @@ export class AuthService {
     private readonly userService: UserService,
     private readonly passwordService: PasswordService,
     private readonly tokenService: TokenService
-  ) {}
+  ) { }
 
   async validateUser(
     username: string,

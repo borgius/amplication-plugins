@@ -1,8 +1,8 @@
 import { Field, ObjectType } from "@nestjs/graphql";
-import { User } from "../user/base/User";
+import { User } from "../entities/user/base/User";
 
-declare class USER_ID_TYPE_ANNOTATION {}
-declare class USER_ID_CLASS {}
+declare class USER_ID_TYPE_ANNOTATION { }
+declare class USER_ID_CLASS { }
 
 @ObjectType()
 export class UserInfo implements Partial<User> {

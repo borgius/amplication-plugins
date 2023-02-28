@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "setup0": "ep -d1 npm i",
+    "build": "echo 'root'",
     "build0": "ep -d1 npm run build"
   },
   "repository": {

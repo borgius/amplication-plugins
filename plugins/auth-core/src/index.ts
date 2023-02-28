@@ -206,13 +206,13 @@ class AuthCorePlugin implements AmplicationPlugin {
     const grants =
       context.entities && context.roles
         ? createGrantsModule(
-            context.serverDirectories.srcDirectory,
-            context.entities,
-            context.roles
-          )
+          context.serverDirectories.srcDirectory,
+          context.entities,
+          context.roles
+        )
         : null;
 
-    return grants ? [ ...modules, grants] : modules;
+    return grants ? [...modules, grants] : modules;
   }
 
   async afterCreateAppModule(
@@ -339,10 +339,10 @@ class AuthCorePlugin implements AmplicationPlugin {
       forwardRefArrowFunction,
     ]);
 
-    const aclModuleImport = importNames([aclModuleId], "../../auth/acl.module");
+    const aclModuleImport = importNames([aclModuleId], "../../../auth/acl.module");
     const authModuleImport = importNames(
       [authModuleId],
-      "../../auth/auth.module"
+      "../../../auth/auth.module"
     );
     const forwardRefImport = importNames([forwardRefId], "@nestjs/common");
 
@@ -471,7 +471,7 @@ class AuthCorePlugin implements AmplicationPlugin {
           builders.identifier("defaultAuthGuard")
         ),
       ],
-      builders.stringLiteral("../../auth/defaultAuth.guard")
+      builders.stringLiteral("../../../auth/defaultAuth.guard")
     );
 
     const ignoreComment = builders.commentLine("// @ts-ignore", false);
@@ -660,12 +660,12 @@ class AuthCorePlugin implements AmplicationPlugin {
 
     const gqlDefaultAuthGuardImport = importNames(
       [builders.identifier("GqlDefaultAuthGuard")],
-      "../auth/gqlDefaultAuth.guard"
+      "../../auth/gqlDefaultAuth.guard"
     );
 
     const gqlACGuardImport = builders.importDeclaration(
       [builders.importNamespaceSpecifier(builders.identifier("gqlACGuard"))],
-      builders.stringLiteral("../auth/gqlAC.guard")
+      builders.stringLiteral("../../auth/gqlAC.guard")
     );
 
     addImports(
@@ -758,13 +758,13 @@ class AuthCorePlugin implements AmplicationPlugin {
 
     const gqlACGuardImport = builders.importDeclaration(
       [builders.importNamespaceSpecifier(builders.identifier("gqlACGuard"))],
-      builders.stringLiteral("../../auth/gqlAC.guard")
+      builders.stringLiteral("../../../auth/gqlAC.guard")
     );
 
     const gqlDefaultAuthGuardId = builders.identifier("GqlDefaultAuthGuard");
     const gqlDefaultAuthGuardImport = importNames(
       [gqlDefaultAuthGuardId],
-      "../../auth/gqlDefaultAuth.guard"
+      "../../../auth/gqlDefaultAuth.guard"
     );
 
     const commonImport = builders.importDeclaration(
@@ -814,7 +814,7 @@ class AuthCorePlugin implements AmplicationPlugin {
               builders.objectProperty(
                 builders.identifier("resource"),
                 eventParams.templateMapping[
-                  "ENTITY_NAME"
+                "ENTITY_NAME"
                 ] as namedTypes.StringLiteral
               ),
               builders.objectProperty(
@@ -939,7 +939,7 @@ class AuthCorePlugin implements AmplicationPlugin {
           [PASSWORD_SERVICE_ID],
           relativeImportPath(
             modulePath,
-            `${context.serverDirectories.srcDirectory}/auth/password.service.ts`
+            `${context.serverDirectories.srcDirectory}/../auth/password.service.ts`
           )
         ),
       ]);
@@ -1135,7 +1135,7 @@ class AuthCorePlugin implements AmplicationPlugin {
         [PASSWORD_SERVICE_ID],
         relativeImportPath(
           moduleBasePath,
-          `${context.serverDirectories.srcDirectory}/auth/password.service.ts`
+          `${context.serverDirectories.srcDirectory}/../auth/password.service.ts`
         )
       ),
     ]);
